@@ -38,7 +38,7 @@ public class ExternalProcessUDF extends UDF {
   	OutputStream os = p.getOutputStream();
   	InputStream is = p.getInputStream();
   	
-  	os.write(val.array(), val.limit(), val.limit() - val.position());
+  	os.write(val.array(), val.position(), val.limit() - val.position());
   	os.close();
   	//logger.error("buf = " + val);
   	
